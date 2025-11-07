@@ -1,0 +1,74 @@
+.code-editor-panel {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-editor-panel .panel-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.code-editor-panel .panel-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.code-editor-panel .panel-content {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+.code-editor-panel .panel-content > div {
+  height: 100%;
+}
+
+/* Monaco Editor Overrides */
+.monaco-editor {
+  background: var(--dark-bg) !important;
+  color: var(--text) !important;
+}
+
+.monaco-editor .line-numbers {
+  background: var(--dark-bg) !important;
+  color: var(--text-secondary) !important;
+}
+
+.monaco-editor .current-line {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.monaco-editor .bracket-match {
+  background: rgba(100, 200, 100, 0.2) !important;
+  border: 1px solid rgba(100, 200, 100, 0.5) !important;
+}
+
+.monaco-editor .selection {
+  background: rgba(99, 102, 241, 0.3) !important;
+}
+
+.monaco-editor .word-highlight {
+  background: rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Scrollbar styling for Monaco */
+.monaco-scrollable-element > .scrollbar {
+  z-index: 40;
+}
+
+.monaco-editor .scrollbar {
+  background: var(--border);
+}
+
+.monaco-editor .scrollbar:hover {
+  background: #555;
+}
+
+@media (max-width: 1200px) {
+  .code-editor-panel {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}

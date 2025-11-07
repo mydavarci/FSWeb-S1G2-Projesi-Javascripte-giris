@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd ai-code-tutor && npm install && npm run build",
+  "outputDirectory": "ai-code-tutor/dist",
+  "installCommand": "cd ai-code-tutor && npm install",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/ai-code-tutor/index.html"
+    }
+  ]
+}

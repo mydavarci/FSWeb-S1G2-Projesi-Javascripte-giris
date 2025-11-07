@@ -1,12 +1,18 @@
 {
-  "buildCommand": "cd ai-code-tutor && npm install && npm run build",
-  "outputDirectory": "ai-code-tutor/dist",
-  "installCommand": "cd ai-code-tutor && npm install",
-  "framework": "vite",
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/ai-code-tutor/index.html"
+      "src": "ai-code-tutor/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/ai-code-tutor/dist/$1"
     }
   ]
 }

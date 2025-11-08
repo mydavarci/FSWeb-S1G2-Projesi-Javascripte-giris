@@ -1,5 +1,6 @@
 {
-  "buildCommand": "cd ai-code-tutor && npm run build",
-  "outputDirectory": "ai-code-tutor/dist",
-  "installCommand": "cd ai-code-tutor && npm install"
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

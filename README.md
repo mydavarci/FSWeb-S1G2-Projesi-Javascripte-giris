@@ -1,61 +1,109 @@
-# JavaScript'e Giriş
+# 🤖 AI Kod Öğretmen - React + JavaScript
 
-Bu "sprint 1 - gün 2" projesi görevini kendi başına yapman beklenmektedir. Daha önce eğitmen eşliğinde adım adım yapılan projenin biraz daha genişletilmiş halidir.
+**Profesyonel AI destekli interaktif kod öğrenme platformu**
 
-## JavaScript Temelleri
+Her seviye için 100 egzersiz ile JavaScript ve React öğrenin!
 
-- let, const, var kullanın ve farklarını gör.
-- farklı operatörleri anla ve kullan.
-- basit bir loop / while loop döngüsü yaz.
-- if/else ifadeleri kullanarak kontroller yaz.
-- function, declarations, expressions ve arrow functions kullan ve farklarını anlat.
+## ✨ Ana Özellikler
 
-## Giriş
+- 🎯 **Her seviye için 100 egzersiz** - Google Gemini AI
+- 🏆 **10 zorluk seviyesi** - Otomatik ilerler
+- 💻 **Monaco Editor** - VS Code editörü
+- 🤖 **AI değerlendirme** - Detaylı feedback
+- 📊 **Puanlama & İstatistikler** - Seri, seviye, başarı
+- 🔄 **Cache sistemi** - Hızlı yükleme
 
-Bugün, 7 tane JavaScript görevi tamamlarken JavaScript'in temellerini deneyimleyeceksin. Yavaş yavaş Vanilla JavaScript'e aşina oluyorsun. 🍦
+## 🚀 Hızlı Başlangıç
 
-Alıştırmalarının yönergesini `index.js` dosyasında bulacaksın. Her görev için verilen talimatları dikkatlice oku ve görevleri tamamla. Görevi tamamlamak için gereken bilgiyi bilmediğin durumlarda Google'lama 🔍 yeteneğin ile araştırman gerektiğini unutma.
+### 1. API Anahtarı
 
-## Talimatlar
+[Google AI Studio](https://makersuite.google.com/app/apikey) → "Create API Key"
 
-### Görev 1: Projenin Kurulumu
+### 2. Çalıştır
 
-VSCode, Codegrade ve Command Line araçları kullanarak:
+```bash
+npm run dev
+```
 
-1. Bu repo'yu fork'la.
-2. Fork'ladığın repo'yu bilgisayarında clone'la.
-3. Bu projede `main` branch'ine push'layacaksın. LÜTFEN BRANCH OLUŞTURMA!
-4. **Repo'nuzun olduğu klasöre gidin** (`cd REPO_ADI`)
-5. Vs Code'da terminali açın ve `npm install` yazın ve çalıştırın. Bunu her projede sadece 1 kere yapacaksın.
-not: Bugünkü projede pull request **atmıyorsun**. 
+Tarayıcıda aç: **http://localhost:5173**
 
-### Görev 2: MVP
+### 3. Kullan
 
-#### Test Etme & Debug Yapma
+1. API key gir
+2. "Yeni Egzersiz" tıkla
+3. Kodunu yaz
+4. "Çalıştır" ile test et
+5. "AI'ya Gönder" ile değerlendir
+6. Puan kazan!
 
-Projen klasöründeyken, VS Code'da "split terminal"i tıklayarak ikinci bir terminal ekranı aç.
+## 📋 Proje Yapısı
 
-![alt text](assets/split_terminal.png "Split Terminal")
+```
+src/
+├── components/          # React componentler
+│   ├── Header.jsx      # Başlık, puan, seviye
+│   ├── TaskPanel.jsx   # Egzersiz paneli
+│   ├── CodeEditor.jsx  # Monaco editor
+│   ├── ConsolePanel.jsx # Konsol & butonlar
+│   ├── ApiKeyModal.jsx # API key modal
+│   └── LoadingOverlay.jsx
+├── services/
+│   └── geminiService.js # AI servis
+├── store/
+│   └── useStore.js     # Zustand state
+├── App.jsx
+└── main.jsx
+```
 
-Sonra `npm run test` yazın ve çalıştırın
-![alt text](assets/npm_run_test.png "npm run test")
+## 🎯 Seviye Sistemi
 
-Açılan ikinci terminalde `npm start` yazıp çalıştırın.
-![alt text](assets/npm_start.png "npm start")
+| Seviye | Puan | Zorluk | Egzersiz Puanı |
+|--------|------|--------|----------------|
+| 1-2 | 0-199 | Çok Kolay | +10 |
+| 3-4 | 200-399 | Kolay | +10-20 |
+| 5-6 | 400-599 | Orta | +20 |
+| 7-8 | 600-799 | Zor | +30 |
+| 9-10 | 800+ | Çok Zor | +50 |
 
-Split terminal ile ekranında testleri çalıştırırken bir diğerinde ise debug yapabileceksin. Kodlarında güncelleme yaptıkça ilerlemeyi kontrol için `console.log`'u kullanabilirsin.
+## 💡 Özellikler
 
-![alt text](assets/debug_terminal.png "Terminal buna benzemeli")
+### JavaScript Konuları
+- **Seviye 1-3**: Değişkenler, fonksiyonlar, döngüler
+- **Seviye 4-6**: Array/Object metodları, async/await
+- **Seviye 7-10**: Algoritmalar, design patterns
 
-`index.js` dosyasında ifade edildiği gibi verilen görevleri adım adım yap.
-**Amacın 24 testi de geçmek.**
+### React Konuları
+- **Seviye 1-3**: JSX, components, useState, useEffect
+- **Seviye 4-6**: useContext, custom hooks, useReducer
+- **Seviye 7-10**: Advanced patterns, optimization
 
-![alt text](assets/npm_test_skoru.png) "npm test skoru örneği (sadece 1 testten geçilmiş(passed)23 test başarısız (_failed_) olmuş
+## 🛠️ Teknolojiler
 
-### Görev 3: Bonus Çalışmalar
+- React 19 + Vite 7
+- Zustand (state management)
+- Monaco Editor
+- Google Gemini AI
+- React Icons
 
-Sana verilen gün sonu projesindeki görevleri tamamladıktan, yine `index.js` sonundaki bonus çalışmaları yapmanı tavsiye ederiz.
+## 📦 Komutlar
 
-## Proje Teslim Etme Adımları
+```bash
+npm run dev      # Dev server
+npm run build    # Production build
+npm run preview  # Preview build
+npm run lint     # ESLint check
+```
 
-Verilen görevi tamamladıktan sonra [Workintech Platformu](https://app.workintech.com.tr)'nda (app.workintech.com.tr) `Sprint 1>Gün 2`'nin sonuna eklenmiş olan "` Görev: Sprint 1'in 2. Gün projesini buraya yükle`" içeriğini açıp. GitHub hesabında oluşturduğunuz repo'nun adresini buraya ekleyiniz. Eğitmenlerimiz, gün projenizi kontrol edecek ve ertesi gün size slack üzerinden geribildirimde bulunacaklar.
+## 🐛 Sorun Giderme
+
+**API Hatası?** → API key'i kontrol et
+**Monaco yüklenmiyor?** → İnternet bağlantısı kontrol et
+**Kod çalışmıyor?** → Console'da hata mesajını oku
+
+## 📄 Lisans
+
+Eğitim amaçlı, özgürce kullanılabilir.
+
+---
+
+**Mutlu Kodlamalar!** 🚀✨
